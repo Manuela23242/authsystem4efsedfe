@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verifizierung - FreezeAI</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #5865F2, #404EED);
+            color: white;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            padding: 30px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .success {
+            color: #43b581;
+        }
+        .error {
+            color: #f04747;
+        }
+        .discord-btn {
+            background: #5865F2;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+            text-decoration: none;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        {% if success %}
+            <h1 class="success">✅ Verifizierung erfolgreich!</h1>
+            <p>Willkommen, <strong>{{ username }}</strong>!</p>
+            <p>Deine Discord-ID: <code>{{ user_id }}</code></p>
+            <p>Du kannst jetzt zurück zu Discord gehen und <code>!djoin</code> nutzen.</p>
+            <a href="discord://" class="discord-btn">Zurück zu Discord</a>
+        {% else %}
+            <h1 class="error">❌ Verifizierung fehlgeschlagen</h1>
+            <p>Fehler: {{ error }}</p>
+            <p>Bitte versuche es erneut oder kontaktiere den Support.</p>
+        {% endif %}
+    </div>
+</body>
+</html>
