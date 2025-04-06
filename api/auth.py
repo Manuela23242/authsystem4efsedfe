@@ -48,4 +48,4 @@ def auth_callback():
 
 @app.route('/')
 def index():
-    return redirect('https://your-discord-invite.gg')  # Redirect to your Discord
+    return redirect('https://discord.gg/freezegg')  # Redirect to your Discord
