@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 CLIENT_ID = os.getenv('CLIENT_ID', '1332407176970502194')
 CLIENT_SECRET = os.getenv('CLIENT_SECRET', 'rFQmcF-Wl6Q1o96HKf646S8wElg0dYI3')
-REDIRECT_URI = os.getenv('REDIRECT_URI', 'https://freezeai.vercel.app/api/auth')
+REDIRECT_URI = os.getenv('REDIRECT_URI', 'https://authsystem4efsedfe.vercel.app/api/auth')
 
 @app.route('/api/auth')
 def auth_callback():
